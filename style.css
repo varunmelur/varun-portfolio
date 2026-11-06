@@ -1,4 +1,4 @@
-```css
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
@@ -47,6 +48,7 @@ nav a:hover {
     color: #00d9ff;
 }
 
+/* HERO */
 .hero {
     min-height: 85vh;
     display: flex;
@@ -54,6 +56,10 @@ nav a:hover {
     justify-content: space-around;
     padding: 60px 10%;
     gap: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
 }
 
 .intro {
@@ -77,8 +83,10 @@ nav a:hover {
 
 .hero-content p {
     line-height: 1.7;
+    color: #ccc;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 25px;
@@ -88,24 +96,34 @@ nav a:hover {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
 }
 
 /* PROFILE PHOTO */
 .profile {
     flex-shrink: 0;
+    width: 190px;
+    height: 190px;
 }
 
 .profile img {
+    display: block;
     width: 190px;
     height: 190px;
+    max-width: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
     border: 3px solid #00d9ff;
     box-shadow: 0 0 25px #00d9ff55;
-    display: block;
 }
 
+/* GENERAL SECTIONS */
 section:not(.hero) {
     padding: 80px 10%;
     text-align: center;
@@ -117,13 +135,24 @@ section h2 {
     margin-bottom: 30px;
 }
 
+/* ABOUT */
 #about p {
     max-width: 750px;
-    margin: auto;
+    margin: 10px auto;
     line-height: 1.8;
     color: #ccc;
 }
 
+.education {
+    margin-top: 35px;
+}
+
+.education h3 {
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
+
+/* SKILLS */
 .skill-container,
 .project-container {
     display: grid;
@@ -148,6 +177,15 @@ section h2 {
     box-shadow: 0 0 20px #00d9ff33;
 }
 
+.skill-card h3 {
+    color: white;
+}
+
+/* PROJECTS */
+.project-card {
+    text-align: left;
+}
+
 .project-card h3 {
     color: #00d9ff;
     margin-bottom: 15px;
@@ -158,8 +196,9 @@ section h2 {
     line-height: 1.7;
 }
 
+/* CONTACT */
 .contact-card {
-    max-width: 450px;
+    max-width: 500px;
     margin: auto;
     line-height: 2.5;
 }
@@ -168,6 +207,16 @@ section h2 {
     color: #00d9ff;
 }
 
+.contact-card a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: #00d9ff;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
@@ -175,7 +224,9 @@ footer {
     color: #aaa;
 }
 
+/* MOBILE RESPONSIVE */
 @media(max-width: 700px) {
+
     nav {
         flex-direction: column;
         gap: 20px;
@@ -190,6 +241,12 @@ footer {
     .hero {
         flex-direction: column-reverse;
         text-align: center;
+        padding: 50px 7%;
+    }
+
+    .profile {
+        width: 160px;
+        height: 160px;
     }
 
     .profile img {
@@ -201,5 +258,12 @@ footer {
     .project-container {
         grid-template-columns: 1fr;
     }
+
+    section:not(.hero) {
+        padding: 60px 7%;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
 }
-```
